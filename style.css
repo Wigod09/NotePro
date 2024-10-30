@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body{
+    background: linear-gradient(to bottom,var(--purple),var(--blue-light));
+    height: 100vh;
+    background-attachment: fixed;
+    font-family: 'Prompt',sans-serif;
+}
+
+.container{
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo{
+    display: flex;
+    justify-content: center;
+}
+
+/* Perfil */
+
+.perfil h1{
+    color: var(--white);
+}
+
+.perfil span{
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+#fecha{
+    color: var(--white);
+    padding: 5px 0;
+}
+
+/* Agregar Tarea */
+
+.agregar-tarea{
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 70px;
+    margin: 40px 0;
+    max-width: 100%;
+}
+
+.agregar-tarea input{
+    width: 100%;
+    height: 100%;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+}
+
+.agregar-tarea i{
+    font-size: 50px;
+    color: var(--purple);
+}
+
+.agregar-tarea i:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.agregar-tarea input::placeholder{
+    font-size: 1.2rem;
+    color: var(--purple);
+}
+
+@media (max-width: 350px) {
+    .agregar-tarea {
+        height: 9.6%;
+        gap: 20px;
+    }
+
+    .agregar-tarea i {
+        font-size: 25px;
+    }
+
+    .agregar-tarea input {
+        font-size: 1rem;
+    }
+    .agregar-tarea input::placeholder{
+        color: var(--purple);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .agregar-tarea {
+        height: 20%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .agregar-tarea i {
+        font-size: 35px;
+    }
+
+    .agregar-tarea input {
+        font-size: 1rem;
+    }
+}
+
+/* Seccion Tarea */
+
+.seccion-tarea{
+    padding: 1px 0;
+}
+
+.seccion-tarea h3{
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li{
+    display: flex;
+    background: linear-gradient(to bottom,var(--blue-dark),var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: var(--white);
+}
+
+.seccion-tarea i{
+    font-size: 25px;
+}
+
+.seccion-tarea i:hover{
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.seccion-tarea > ul p{
+    font-size: 1.1rem;
+}
+
+.line-through{
+    text-decoration: line-through;
+    color: var(--blue-light);
+}
